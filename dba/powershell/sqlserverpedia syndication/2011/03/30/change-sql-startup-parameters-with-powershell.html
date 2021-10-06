@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Change SQL Startup Parameters with PowerShell | Your awesome title</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Change SQL Startup Parameters with PowerShell" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="[caption id=&quot;attachment_154&quot; align=&quot;alignright&quot; width=&quot;272&quot; caption=&quot;Backups Abound&quot;][/caption] The Annoyance Sometimes when we&#39;re trying to track down a problem and looking through SQL&#39;s Logs we have to dig through hundreds of backup successful events just to find what we&#39;re looking for. Unfortunately, SSMS doesn&#39;t have an exclusion filter when viewing the logs, so I can&#39;t filter them out that way.&nbsp;We also don&#39;t care about having successful backups in these logs as the info is available elsewhere, including our management database. The Solution Trace flag 3226 will turn off logging of successful backups to the SQL Server error log, in addition to the Windows system event log. There are two ways to turn this on. Using the T-SQL command DBCC TRACEON(3226,-1), you immediately enable it, but only until SQL restarts as flags set this way do not survive a service restart. The other way to set it is by using startup parameters for the SQL service. [caption id=&quot;attachment_155&quot; align=&quot;alignleft&quot; width=&quot;300&quot; caption=&quot;Don&#39;t Forget the Semicolons&quot;][/caption] In order to change SQL&#39;s startup parameters, you need to: Load SQL Server Configuration Manager Right-click and bring up the Properties for the service you want to edit Click the Advanced tab Edit the Startup Parameters property by appending -T3226, remembering to separate with semicolons Click OK The Better Solution I wanted to do this quick and easy without all the clicks. I knew I wouldn&#39;t just do this on one server, but maybe tens if not a hundred. So I opened up PowerShell ISE and started cranking out a script to this for me. My first hurdle was how are these startup parameters stored and how can I actually get to them to edit them. It turns out, they are just stored as registry keys. PowerShell works with the registry real well. After finding the key locations, doing some logic to make sure I change all instances on that server, I had my script. I made it generic enough so you could add any startup parameter to SQL, not just trace flags. Calling the script to update all instances on the current computer is as easy as PS&gt; .\Add-SqlServerStartupParameter.ps1 &#39;-T3226&#39; Caveats The current version does not support SQL 2000, though I plan to release an update that will. I also plan to release a version that supports remote servers. If you are changing a clustered instance, make sure to change it on node the instance is running on as clustered instances overwrite registry settings with whatever their last values were when the instance was running. It&#39;s best to change all nodes in a cluster at once, to be on the safe side. Download the script:&nbsp;Add-SqlServerStartupParameter" />
+<meta property="og:description" content="[caption id=&quot;attachment_154&quot; align=&quot;alignright&quot; width=&quot;272&quot; caption=&quot;Backups Abound&quot;][/caption] The Annoyance Sometimes when we&#39;re trying to track down a problem and looking through SQL&#39;s Logs we have to dig through hundreds of backup successful events just to find what we&#39;re looking for. Unfortunately, SSMS doesn&#39;t have an exclusion filter when viewing the logs, so I can&#39;t filter them out that way.&nbsp;We also don&#39;t care about having successful backups in these logs as the info is available elsewhere, including our management database. The Solution Trace flag 3226 will turn off logging of successful backups to the SQL Server error log, in addition to the Windows system event log. There are two ways to turn this on. Using the T-SQL command DBCC TRACEON(3226,-1), you immediately enable it, but only until SQL restarts as flags set this way do not survive a service restart. The other way to set it is by using startup parameters for the SQL service. [caption id=&quot;attachment_155&quot; align=&quot;alignleft&quot; width=&quot;300&quot; caption=&quot;Don&#39;t Forget the Semicolons&quot;][/caption] In order to change SQL&#39;s startup parameters, you need to: Load SQL Server Configuration Manager Right-click and bring up the Properties for the service you want to edit Click the Advanced tab Edit the Startup Parameters property by appending -T3226, remembering to separate with semicolons Click OK The Better Solution I wanted to do this quick and easy without all the clicks. I knew I wouldn&#39;t just do this on one server, but maybe tens if not a hundred. So I opened up PowerShell ISE and started cranking out a script to this for me. My first hurdle was how are these startup parameters stored and how can I actually get to them to edit them. It turns out, they are just stored as registry keys. PowerShell works with the registry real well. After finding the key locations, doing some logic to make sure I change all instances on that server, I had my script. I made it generic enough so you could add any startup parameter to SQL, not just trace flags. Calling the script to update all instances on the current computer is as easy as PS&gt; .\Add-SqlServerStartupParameter.ps1 &#39;-T3226&#39; Caveats The current version does not support SQL 2000, though I plan to release an update that will. I also plan to release a version that supports remote servers. If you are changing a clustered instance, make sure to change it on node the instance is running on as clustered instances overwrite registry settings with whatever their last values were when the instance was running. It&#39;s best to change all nodes in a cluster at once, to be on the safe side. Download the script:&nbsp;Add-SqlServerStartupParameter" />
+<link rel="canonical" href="/dba/powershell/sqlserverpedia%20syndication/2011/03/30/change-sql-startup-parameters-with-powershell.html" />
+<meta property="og:url" content="/dba/powershell/sqlserverpedia%20syndication/2011/03/30/change-sql-startup-parameters-with-powershell.html" />
+<meta property="og:site_name" content="Your awesome title" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2011-03-30T19:44:47-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Change SQL Startup Parameters with PowerShell" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"/dba/powershell/sqlserverpedia%20syndication/2011/03/30/change-sql-startup-parameters-with-powershell.html","headline":"Change SQL Startup Parameters with PowerShell","dateModified":"2011-03-30T19:44:47-05:00","datePublished":"2011-03-30T19:44:47-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"/dba/powershell/sqlserverpedia%20syndication/2011/03/30/change-sql-startup-parameters-with-powershell.html"},"description":"[caption id=&quot;attachment_154&quot; align=&quot;alignright&quot; width=&quot;272&quot; caption=&quot;Backups Abound&quot;][/caption] The Annoyance Sometimes when we&#39;re trying to track down a problem and looking through SQL&#39;s Logs we have to dig through hundreds of backup successful events just to find what we&#39;re looking for. Unfortunately, SSMS doesn&#39;t have an exclusion filter when viewing the logs, so I can&#39;t filter them out that way.&nbsp;We also don&#39;t care about having successful backups in these logs as the info is available elsewhere, including our management database. The Solution Trace flag 3226 will turn off logging of successful backups to the SQL Server error log, in addition to the Windows system event log. There are two ways to turn this on. Using the T-SQL command DBCC TRACEON(3226,-1), you immediately enable it, but only until SQL restarts as flags set this way do not survive a service restart. The other way to set it is by using startup parameters for the SQL service. [caption id=&quot;attachment_155&quot; align=&quot;alignleft&quot; width=&quot;300&quot; caption=&quot;Don&#39;t Forget the Semicolons&quot;][/caption] In order to change SQL&#39;s startup parameters, you need to: Load SQL Server Configuration Manager Right-click and bring up the Properties for the service you want to edit Click the Advanced tab Edit the Startup Parameters property by appending -T3226, remembering to separate with semicolons Click OK The Better Solution I wanted to do this quick and easy without all the clicks. I knew I wouldn&#39;t just do this on one server, but maybe tens if not a hundred. So I opened up PowerShell ISE and started cranking out a script to this for me. My first hurdle was how are these startup parameters stored and how can I actually get to them to edit them. It turns out, they are just stored as registry keys. PowerShell works with the registry real well. After finding the key locations, doing some logic to make sure I change all instances on that server, I had my script. I made it generic enough so you could add any startup parameter to SQL, not just trace flags. Calling the script to update all instances on the current computer is as easy as PS&gt; .\\Add-SqlServerStartupParameter.ps1 &#39;-T3226&#39; Caveats The current version does not support SQL 2000, though I plan to release an update that will. I also plan to release a version that supports remote servers. If you are changing a clustered instance, make sure to change it on node the instance is running on as clustered instances overwrite registry settings with whatever their last values were when the instance was running. It&#39;s best to change all nodes in a cluster at once, to be on the safe side. Download the script:&nbsp;Add-SqlServerStartupParameter","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Your awesome title" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Your awesome title</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/about/">About</a><a class="page-link" href="/contact-me/">Contact Me</a><a class="page-link" href="/privacy-policy/">Privacy Policy</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Change SQL Startup Parameters with PowerShell</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2011-03-30T19:44:47-05:00" itemprop="datePublished">Mar 30, 2011
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{"display_name"=>"lotsahelp", "login"=>"lotsahelp", "email"=>"eric@erichumphrey.com", "url"=>""}</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>[caption id="attachment_154" align="alignright" width="272" caption="Backups Abound"]<a href="/wp-content/uploads/2011/03/Backups-Abound.png"><img class="size-medium wp-image-154" title="Backups Abound" src="/wp-content/uploads/2011/03/Backups-Abound-272x300.png" alt="" width="272" height="300" /></a>[/caption]</p>
+<h2>The Annoyance</h2>
+<p>Sometimes when we're trying to track down a problem and looking through SQL's Logs we have to dig through hundreds of backup successful events just to find what we're looking for. Unfortunately, SSMS doesn't have an exclusion filter when viewing the logs, so I can't filter them out that way.&nbsp;We also don't care about having successful backups in these logs as the info is available elsewhere, including our management database.</p>
+<h2>The Solution</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms188396.aspx">Trace flag</a> 3226 will turn off logging of successful backups to the SQL Server error log, in addition to the Windows system event log. There are two ways to turn this on. Using the T-SQL command DBCC TRACEON(3226,-1), you immediately enable it, but only until SQL restarts as flags set this way do not survive a service restart. The other way to set it is by using startup parameters for the SQL service.</p>
+<p>[caption id="attachment_155" align="alignleft" width="300" caption="Don&#39;t Forget the Semicolons"]<a href="/wp-content/uploads/2011/03/SQL-Startup-Parameters.png"><img class="size-medium wp-image-155" title="SQL Startup Parameters" src="/wp-content/uploads/2011/03/SQL-Startup-Parameters-300x224.png" alt="" width="300" height="224" /></a>[/caption]</p>
+<p>In order to change SQL's startup parameters, you need to:</p>
+<ol>
+<li>Load SQL Server Configuration Manager</li>
+<li>Right-click and bring up the Properties for the service you want to edit</li>
+<li>Click the Advanced tab</li>
+<li>Edit the Startup Parameters property by appending -T3226, remembering to separate with semicolons</li>
+<li>Click OK</li>
+</ol>
+<h2>The Better Solution</h2>
+<p>I wanted to do this quick and easy without all the clicks. I knew I wouldn't just do this on one server, but maybe tens if not a hundred. So I opened up PowerShell ISE and started cranking out a script to this for me. My first hurdle was how are these startup parameters stored and how can I actually get to them to edit them. It turns out, they are just stored as registry keys. PowerShell works with the registry real well. After finding the key locations, doing some logic to make sure I change all instances on that server, I had my script. I made it generic enough so you could add any startup parameter to SQL, not just trace flags.</p>
+<p>Calling the script to update all instances on the current computer is as easy as</p>
+<pre lang="powershell">PS&gt; .\Add-SqlServerStartupParameter.ps1 '-T3226'</pre>
+<h3>Caveats</h3>
+<p>The current version does not support SQL 2000, though I plan to release an update that will. I also plan to release a version that supports remote servers. If you are changing a clustered instance, make sure to change it on node the instance is running on as clustered instances overwrite registry settings with whatever their last values were when the instance was running. It's best to change all nodes in a cluster at once, to be on the safe side.</p>
+<p>Download the script:&nbsp;<a href="http://www.erichumphrey.com/wp-content/uploads/2011/03/Add-SqlServerStartupParameter.ps1">Add-SqlServerStartupParameter</a></p>
+
+  </div><a class="u-url" href="/dba/powershell/sqlserverpedia%20syndication/2011/03/30/change-sql-startup-parameters-with-powershell.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Your awesome title</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Your awesome title</li><li><a class="u-email" href="mailto:your-email@example.com">your-email@example.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/jekyll"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">jekyll</span></a></li><li><a href="https://www.twitter.com/jekyllrb"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">jekyllrb</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

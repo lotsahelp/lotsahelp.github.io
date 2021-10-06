@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>PowerPointShell | Your awesome title</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="PowerPointShell" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I wanted to add a neat demo to my .NET Powers Activate! Form of PowerShell! presentation that would really demonstrate the use of .NET in PowerShell. I decided to have PowerShell create a PowerPoint presentation from code for my opening demo. It uses New-Object -ComObject to instantiate a PowerPoint.Application COMobject. The code then proceeds to create a presentation and add two slides, with content, to the presentation. Finally it applies a theme to the presentation. I obfuscated the slide text just for fun by encoding to Base64 and storing the encoded string in the variables at the top. The text gets decoded when getting posted to the slides. The code to encode the text is commented at the bottom for completeness. #Script my PowerPoint slides #Theme requires PowerPoint 2007 (v12)" />
+<meta property="og:description" content="I wanted to add a neat demo to my .NET Powers Activate! Form of PowerShell! presentation that would really demonstrate the use of .NET in PowerShell. I decided to have PowerShell create a PowerPoint presentation from code for my opening demo. It uses New-Object -ComObject to instantiate a PowerPoint.Application COMobject. The code then proceeds to create a presentation and add two slides, with content, to the presentation. Finally it applies a theme to the presentation. I obfuscated the slide text just for fun by encoding to Base64 and storing the encoded string in the variables at the top. The text gets decoded when getting posted to the slides. The code to encode the text is commented at the bottom for completeness. #Script my PowerPoint slides #Theme requires PowerPoint 2007 (v12)" />
+<link rel="canonical" href="/powershell/2011/02/18/powerpointshell.html" />
+<meta property="og:url" content="/powershell/2011/02/18/powerpointshell.html" />
+<meta property="og:site_name" content="Your awesome title" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2011-02-18T08:30:21-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="PowerPointShell" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"/powershell/2011/02/18/powerpointshell.html","headline":"PowerPointShell","dateModified":"2011-02-18T08:30:21-06:00","datePublished":"2011-02-18T08:30:21-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"/powershell/2011/02/18/powerpointshell.html"},"description":"I wanted to add a neat demo to my .NET Powers Activate! Form of PowerShell! presentation that would really demonstrate the use of .NET in PowerShell. I decided to have PowerShell create a PowerPoint presentation from code for my opening demo. It uses New-Object -ComObject to instantiate a PowerPoint.Application COMobject. The code then proceeds to create a presentation and add two slides, with content, to the presentation. Finally it applies a theme to the presentation. I obfuscated the slide text just for fun by encoding to Base64 and storing the encoded string in the variables at the top. The text gets decoded when getting posted to the slides. The code to encode the text is commented at the bottom for completeness. #Script my PowerPoint slides #Theme requires PowerPoint 2007 (v12)","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Your awesome title" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Your awesome title</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/about/">About</a><a class="page-link" href="/contact-me/">Contact Me</a><a class="page-link" href="/privacy-policy/">Privacy Policy</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">PowerPointShell</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2011-02-18T08:30:21-06:00" itemprop="datePublished">Feb 18, 2011
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{"display_name"=>"lotsahelp", "login"=>"lotsahelp", "email"=>"eric@erichumphrey.com", "url"=>""}</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>I wanted to add a neat demo to my <a href="/2011/02/presenting-for-the-pass-powershell-virtual-chapter/">.NET Powers Activate! Form of PowerShell!</a> presentation that would really demonstrate the use of .NET in PowerShell. I decided to have PowerShell create a PowerPoint presentation from code for my opening demo.</p>
+<p>It uses New-Object -ComObject to instantiate a PowerPoint.Application COMobject. The code then proceeds to create a presentation and add two slides, with content, to the presentation. Finally it applies a theme to the presentation. I obfuscated the slide text just for fun by encoding to Base64 and storing the encoded string in the variables at the top. The text gets decoded when getting posted to the slides. The code to encode the text is commented at the bottom for completeness.</p>
+<pre lang="powershell">#Script my PowerPoint slides
+#Theme requires PowerPoint 2007 (v12)
+
+$title = 'Lk5FVCBQb3dlcnMgQWN0aXZhdGUhIEZvcm0gb2YgUG93ZXJTaGVsbCE='
+$subtitle = 'RXJpYyBIdW1waHJleQ=='
+$contactInfo = 'd3d3LmVyaWNodW1waHJleS5jb20KQGxvdHNhaGVscAp3d3cubGlua2VkaW4uY29tL2luL2xvdHNhaGVscAplcmljLmh1bXBocmV5QGdtYWlsLmNvbQ=='
+
+$app = New-Object -ComObject PowerPoint.Application -strict -property @{visible=$true}
+$ppt = $app.Presentations.Add($true)
+$slide = $ppt.Slides.Add(1, 1)
+$slide.Shapes.Title.TextFrame.TextRange = [System.Text.Encoding]::ASCII.GetString([Convert]::FromBase64String($title))
+$slide.Shapes | ?{$_.Name -eq 'Subtitle 2'} | %{$_.TextFrame.TextRange = [System.Text.Encoding]::ASCII.GetString([Convert]::FromBase64String($subtitle))}
+
+$slide2 = $ppt.Slides.Add(2, 2)
+$slide2.Shapes.Title.TextFrame.TextRange = 'Contact Me'
+$slide2.Shapes |
+    ?{$_.Name -eq 'Text Placeholder 2'} |
+    %{$_.TextFrame.TextRange = [System.Text.Encoding]::ASCII.GetString([Convert]::FromBase64String($contactInfo))}
+
+if(Test-Path 'C:\Program Files (x86)' -PathType Container) {
+    $ppt.ApplyTheme("C:\Program Files (x86)\Microsoft Office\Document Themes 12\Module.thmx")
+} else {
+    $ppt.ApplyTheme("C:\Program Files\Microsoft Office\Document Themes 12\Module.thmx")
+}
+
+#Command used to encode strings to Base64
+#[System.Convert]::ToBase64String([System.Text.Encoding]::ASCII.GetBytes(''))</pre>
+
+  </div><a class="u-url" href="/powershell/2011/02/18/powerpointshell.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Your awesome title</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Your awesome title</li><li><a class="u-email" href="mailto:your-email@example.com">your-email@example.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/jekyll"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">jekyll</span></a></li><li><a href="https://www.twitter.com/jekyllrb"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">jekyllrb</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

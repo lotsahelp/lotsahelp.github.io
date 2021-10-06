@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-07-31T22:48:35-05:00</updated><id>/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="/jekyll/update/2021/07/31/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2021-07-31T22:24:55-05:00</published><updated>2021-07-31T22:24:55-05:00</updated><id>/jekyll/update/2021/07/31/welcome-to-jekyll</id><content type="html" xml:base="/jekyll/update/2021/07/31/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.MARKUP&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR&lt;/code&gt; is a four-digit number, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MONTH&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DAY&lt;/code&gt; are both two-digit numbers, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MARKUP&lt;/code&gt; is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">Missing Biometric devices Node in Device Manager</title><link href="/uncategorized/2020/05/21/missing-biometric-devices-node-in-device-manager.html" rel="alternate" type="text/html" title="Missing Biometric devices Node in Device Manager" /><published>2020-05-21T12:09:55-05:00</published><updated>2020-05-21T12:09:55-05:00</updated><id>/uncategorized/2020/05/21/missing-biometric-devices-node-in-device-manager</id><content type="html" xml:base="/uncategorized/2020/05/21/missing-biometric-devices-node-in-device-manager.html">&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;If you have a Windows Hello compatible device (face or finger-print) and you are unable to use it, make sure Device Manager has a node for Biometric devices (see below). I have a Windows Hello Face capable laptop and lost the ability to login with my face. This node was no longer there. After some back and forth with tech support, they were finally able to fix it. I'm blogging this since I could never find a good answer searching on my own and want to document the fix.&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:image {&quot;id&quot;:339,&quot;sizeSlug&quot;:&quot;large&quot;} --&gt;&lt;/p&gt;
+&lt;figure class=&quot;wp-block-image size-large&quot;&gt;&lt;img src=&quot;https://www.erichumphrey.com/wp-content/uploads/2020/05/image.png&quot; alt=&quot;&quot; class=&quot;wp-image-339&quot; /&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;!-- /wp:image --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;First make sure your camera still works using your preferred app. If not, you'll want to fix that first. Next browse to the folder &quot;C:\Windows\System32\WinBioPlugIns\FaceDriver&quot; and right-click the two .inf files (Setup Information) and Install them. Go back into Settings -&amp;gt; Accounts -&amp;gt; Sign-in Options and Windows Hello Face should be available again.&lt;/p&gt;
+&lt;p&gt;&lt;!-- /wp:paragraph --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:image {&quot;id&quot;:340,&quot;sizeSlug&quot;:&quot;large&quot;} --&gt;&lt;/p&gt;
+&lt;figure class=&quot;wp-block-image size-large&quot;&gt;&lt;img src=&quot;https://www.erichumphrey.com/wp-content/uploads/2020/05/image-1-1024x412.png&quot; alt=&quot;&quot; class=&quot;wp-image-340&quot; /&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;!-- /wp:image --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- wp:image {&quot;id&quot;:341,&quot;sizeSlug&quot;:&quot;large&quot;} --&gt;&lt;/p&gt;
+&lt;figure class=&quot;wp-block-image size-large&quot;&gt;&lt;img src=&quot;https://www.erichumphrey.com/wp-content/uploads/2020/05/image-2-1024x613.png&quot; alt=&quot;&quot; class=&quot;wp-image-341&quot; /&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;!-- /wp:image --&gt;&lt;/p&gt;</content><author><name>{&quot;display_name&quot;=&gt;&quot;lotsahelp&quot;, &quot;login&quot;=&gt;&quot;lotsahelp&quot;, &quot;email&quot;=&gt;&quot;eric@erichumphrey.com&quot;, &quot;url&quot;=&gt;&quot;&quot;}</name><email>eric@erichumphrey.com</email></author><category term="Uncategorized" /><summary type="html">If you have a Windows Hello compatible device (face or finger-print) and you are unable to use it, make sure Device Manager has a node for Biometric devices (see below). I have a Windows Hello Face capable laptop and lost the ability to login with my face. This node was no longer there. After some back and forth with tech support, they were finally able to fix it. I'm blogging this since I could never find a good answer searching on my own and want to document the fix. First make sure your camera still works using your preferred app. If not, you'll want to fix that first. Next browse to the folder &quot;C:\Windows\System32\WinBioPlugIns\FaceDriver&quot; and right-click the two .inf files (Setup Information) and Install them. Go back into Settings -&amp;gt; Accounts -&amp;gt; Sign-in Options and Windows Hello Face should be available again.</summary></entry><entry><title type="html">Which Secure Protocols are Allowed on Your Servers</title><link href="/powershell/2015/12/15/which-secure-protocols-are-allowed-on-your-servers.html" rel="alternate" type="text/html" title="Which Secure Protocols are Allowed on Your Servers" /><published>2015-12-15T15:15:29-06:00</published><updated>2015-12-15T15:15:29-06:00</updated><id>/powershell/2015/12/15/which-secure-protocols-are-allowed-on-your-servers</id><content type="html" xml:base="/powershell/2015/12/15/which-secure-protocols-are-allowed-on-your-servers.html">&lt;p&gt;A script to have handy to tell you which schannel protocols are enabled / disabled for PCI or certificate compliance.&lt;/p&gt;
+&lt;p&gt;This one works well for local servers. If you want to query a remote server, look below.&lt;/p&gt;
+&lt;pre lang=&quot;powershell&quot;&gt;
+$path = &quot;HKLM://SYSTEM/CurrentControlSet/Control/SecurityProviders/Schannel/Protocols&quot;
+
+Push-Location
+Set-Location -Path $path
+Get-ChildItem . |
+  Select-Object @{
+                  Name=&quot;Protocol&quot;
+                  Expression={Split-Path $_.PSPath -leaf}
+              },@{
+                  Name=&quot;Client Enabled&quot;
+                  Expression={(Get-ItemProperty -Path (Join-Path $_.PSPath 'Client') -ErrorAction silentlycontinue).Enabled}
+              },@{
+                  Name=&quot;Client DisabledByDefault&quot;
+                  Expression={(Get-ItemProperty -Path (Join-Path $_.PSPath 'Client') -ErrorAction silentlycontinue).DisabledByDefault}
+              },@{
+                  Name=&quot;Server Enabled&quot;
+                  Expression={(Get-ItemProperty -Path (Join-Path $_.PSPath 'Server') -ErrorAction silentlycontinue).Enabled}
+              },@{
+                  Name=&quot;Server DisabledByDefault&quot;
+                  Expression={(Get-ItemProperty -Path (Join-Path $_.PSPath 'Server') -ErrorAction silentlycontinue).DisabledByDefault}
+              } | ft -autosize
+Pop-Location
+&lt;/pre&gt;
+&lt;p&gt;This version works against remote servers.&lt;/p&gt;
+&lt;pre lang=&quot;powershell&quot;&gt;
+[CmdletBinding()]
+param(
+    [Parameter(Mandatory=$true,Position=1)]
+    [string]$ComputerName
+)
+$path = &quot;SYSTEM\\CurrentControlSet\\Control\\SecurityProviders\\Schannel\\Protocols\&quot;
+
+$Reg = [Microsoft.Win32.RegistryKey]::OpenRemoteBaseKey('LocalMachine', $ComputerName)
+$Reg.OpenSubKey($path).GetSubKeyNames() | ForEach-Object {
+    $protocol = $_
+    try {
+        $cEnabled = $Reg.OpenSubKey(&quot;$($path)\\$($_)\\Client&quot;).GetValue('Enabled')
+        $cDisabledByDefault = $Reg.OpenSubKey(&quot;$($path)\\$($_)\\Client&quot;).GetValue('DisabledByDefault')
+    } catch {}
+    try {
+        $sEnabled = $Reg.OpenSubKey(&quot;$($path)\\$($_)\\Server&quot;).GetValue('Enabled')
+        $sDisabledByDefault = $Reg.OpenSubKey(&quot;$($path)\\$($_)\\Server&quot;).GetValue('DisabledByDefault')
+    } catch {}
+    
+  New-Object &amp;ndash;TypeName PSObject &amp;ndash;Prop @{&quot;Protocol&quot;=$protocol; &quot;Client Enabled&quot;=$cEnabled; &quot;Client DisabledByDefault&quot;=$cDisabledByDefault; &quot;Server Enabled&quot;=$sEnabled; &quot;Server DisabledByDefault&quot;=$sDisabledByDefault}
+  $cEnabled, $cDisabledByDefault = $null;
+  $sEnabled, $sDisabledByDefault = $null;
+} | Format-Table -Property &quot;Protocol&quot;, &quot;Client Enabled&quot;, &quot;Client DisabledByDefault&quot;, &quot;Server Enabled&quot;, &quot;Server DisabledByDefault&quot; -AutoSize
+Remove-Variable Reg
+&lt;/pre&gt;</content><author><name>{&quot;display_name&quot;=&gt;&quot;lotsahelp&quot;, &quot;login&quot;=&gt;&quot;lotsahelp&quot;, &quot;email&quot;=&gt;&quot;eric@erichumphrey.com&quot;, &quot;url&quot;=&gt;&quot;&quot;}</name><email>eric@erichumphrey.com</email></author><category term="powershell" /><summary type="html">A script to have handy to tell you which schannel protocols are enabled / disabled for PCI or certificate compliance. This one works well for local servers. If you want to query a remote server, look below. $path = &quot;HKLM://SYSTEM/CurrentControlSet/Control/SecurityProviders/Schannel/Protocols&quot;</summary></entry><entry><title type="html">Display All SQL DateTime Conversions</title><link href="/powershell/sql/2014/07/18/display-all-sql-datetime-conversions.html" rel="alternate" type="text/html" title="Display All SQL DateTime Conversions" /><published>2014-07-18T14:30:18-05:00</published><updated>2014-07-18T14:30:18-05:00</updated><id>/powershell/sql/2014/07/18/display-all-sql-datetime-conversions</id><content type="html" xml:base="/powershell/sql/2014/07/18/display-all-sql-datetime-conversions.html">&lt;p&gt;If you want a quick way to determine which format, or style, to specify when converting a datetime value in SQL to a character data type, you can use this simple PowerShell script. Or you can look &lt;a href=&quot;http://msdn.microsoft.com/en-us/library/ms187928.aspx&quot;&gt;at the MSDN page&lt;/a&gt;.&lt;/p&gt;
+&lt;pre lang=&quot;powershell&quot;&gt;0..200 | %{
+    Invoke-Sqlcmd -ServerInstance . -Query (&quot;SELECT num = {0}, CONVERT(varchar(100), GETDATE(), {0})&quot; -f $_)
+} | ft -AutoSize
+&lt;/pre&gt;</content><author><name>{&quot;display_name&quot;=&gt;&quot;lotsahelp&quot;, &quot;login&quot;=&gt;&quot;lotsahelp&quot;, &quot;email&quot;=&gt;&quot;eric@erichumphrey.com&quot;, &quot;url&quot;=&gt;&quot;&quot;}</name><email>eric@erichumphrey.com</email></author><category term="powershell" /><category term="sql" /><summary type="html">If you want a quick way to determine which format, or style, to specify when converting a datetime value in SQL to a character data type, you can use this simple PowerShell script. Or you can look at the MSDN page. 0..200 | %{ Invoke-Sqlcmd -ServerInstance . -Query (&quot;SELECT num = {0}, CONVERT(varchar(100), GETDATE(), {0})&quot; -f $_) } | ft -AutoSize</summary></entry><entry><title type="html">An Amusing New Chapter of My Career</title><link href="/job/2012/03/29/an-amusing-new-chapter-of-my-career.html" rel="alternate" type="text/html" title="An Amusing New Chapter of My Career" /><published>2012-03-29T14:56:08-05:00</published><updated>2012-03-29T14:56:08-05:00</updated><id>/job/2012/03/29/an-amusing-new-chapter-of-my-career</id><content type="html" xml:base="/job/2012/03/29/an-amusing-new-chapter-of-my-career.html">&lt;p&gt;[caption id=&quot;attachment_303&quot; align=&quot;alignright&quot; width=&quot;300&quot; caption=&quot;My New Office&quot;]&lt;a href=&quot;http://www.flickr.com/photos/wallaceperspective/77798734/&quot;&gt;&lt;img class=&quot;size-medium wp-image-303 &quot; title=&quot;77798734_9b0c83f474_n&quot; src=&quot;/wp-content/uploads/2012/03/77798734_9b0c83f474_n-300x225.jpg&quot; alt=&quot;&quot; width=&quot;300&quot; height=&quot;225&quot; /&gt;&lt;/a&gt;[/caption]&lt;/p&gt;
+&lt;p&gt;Starting next week, that's the first week of April, this will be my new office. Well, not really, but I'll be working for the company that hosts this coaster, Six Flags. I'll be overseeing all the SQL Server stuff for the entire organization. That means the back office stuff, plus what it takes to run all 19 parks. This will offer an interesting set of challenges that I haven't had to face before. One example is&amp;nbsp;up-time. During the day, availability must be 100% as many times we won't get a second chance to work with a customer. They've gone home, which could be in a different state. Even though we must be up 100% of the time the park is open, the parks don't usually stay open 24 hours which helps with maintenance windows.&lt;/p&gt;
+&lt;p&gt;This will be an exciting change of pace for me and working with an organization whose purpose is to entertain and amuse. I look forward to what this change will bring. Also, if I ever have a stressful day, I can go to the park that is nearby and ride a coaster to chill out. I'm sure I'll be taking advantage of this a lot.&lt;/p&gt;</content><author><name>{&quot;display_name&quot;=&gt;&quot;lotsahelp&quot;, &quot;login&quot;=&gt;&quot;lotsahelp&quot;, &quot;email&quot;=&gt;&quot;eric@erichumphrey.com&quot;, &quot;url&quot;=&gt;&quot;&quot;}</name><email>eric@erichumphrey.com</email></author><category term="job" /><summary type="html">[caption id=&quot;attachment_303&quot; align=&quot;alignright&quot; width=&quot;300&quot; caption=&quot;My New Office&quot;][/caption] Starting next week, that's the first week of April, this will be my new office. Well, not really, but I'll be working for the company that hosts this coaster, Six Flags. I'll be overseeing all the SQL Server stuff for the entire organization. That means the back office stuff, plus what it takes to run all 19 parks. This will offer an interesting set of challenges that I haven't had to face before. One example is&amp;nbsp;up-time. During the day, availability must be 100% as many times we won't get a second chance to work with a customer. They've gone home, which could be in a different state. Even though we must be up 100% of the time the park is open, the parks don't usually stay open 24 hours which helps with maintenance windows. This will be an exciting change of pace for me and working with an organization whose purpose is to entertain and amuse. I look forward to what this change will bring. Also, if I ever have a stressful day, I can go to the park that is nearby and ride a coaster to chill out. I'm sure I'll be taking advantage of this a lot.</summary></entry><entry><title type="html">T-SQL Tuesday #028 - Jack of All Trades ie Integration Specialist</title><link href="/dba/2012/03/13/t-sql-tuesday-028.html" rel="alternate" type="text/html" title="T-SQL Tuesday #028 - Jack of All Trades ie Integration Specialist" /><published>2012-03-13T06:49:02-05:00</published><updated>2012-03-13T06:49:02-05:00</updated><id>/dba/2012/03/13/t-sql-tuesday-028</id><content type="html" xml:base="/dba/2012/03/13/t-sql-tuesday-028.html">&lt;p&gt;&lt;a href=&quot;http://sqlblog.com/blogs/argenis_fernandez/archive/2012/03/05/t-sql-tuesday-028-jack-of-all-trades-master-of-none.aspx&quot;&gt;&lt;img class=&quot;alignleft size-full wp-image-293&quot; title=&quot;TSQL2sDay150x150&quot; src=&quot;/wp-content/uploads/2012/03/TSQL2sDay150x150_3D59E3C6.jpg&quot; alt=&quot;&quot; width=&quot;150&quot; height=&quot;150&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Argenis Fernandez (&lt;a href=&quot;http://sqlblog.com/blogs/argenis_fernandez&quot;&gt;blog&lt;/a&gt; | &lt;a href=&quot;http://twitter.com/#!/DBArgenis&quot;&gt;twitter&lt;/a&gt;) is &lt;a href=&quot;http://sqlblog.com/blogs/argenis_fernandez/archive/2012/03/05/t-sql-tuesday-028-jack-of-all-trades-master-of-none.aspx&quot;&gt;hosting the latest T-SQL Tuesday&lt;/a&gt; and asking about specialization.&lt;/p&gt;
+&lt;p&gt;For the earlier part of my career I was doing application development while really wanting to do database work. I also learned plenty about systems administration while in college. The variety of the tasks made me a Jack of All Trades with a lean toward databases. I wanted to specialize as a DBA or DB developer, just the jobs were never there until I moved to a bigger market.&lt;/p&gt;
+&lt;p&gt;When I was able to specialize, I was happy I could focus on one thing and get really deep with it. Now I am able to get deep with SQL Server, but I find myself constantly recalling information I learned in my previous positions to help with current issues. CLR, PowerShell, and little custom written utilities all draw from my .NET experience, which I am grateful for. I run into other DBAs that have no clue what goes on outside of their world. Having multiple skills allows me to create better solutions as I don't just consider what I'm responsible for, but all the connections to my piece as well.&lt;/p&gt;
+&lt;p&gt;Being a generalist early in my career has allowed me better understanding of the whole stack of any given solution. It is easier for me to spot an integration problem or see a problem with an application's implementation than it would have been without that variety of experience. Jack of All Trades tend to be better at seeing the big picture as they don't focus on just one area. They can be the ones that help everything fit together better. Specialists are an important part of our ecosystem, but without someone to put the pieces together, you would have perfect components in a flawed system. Solutions really are greater than the sum of their parts.&lt;/p&gt;</content><author><name>{&quot;display_name&quot;=&gt;&quot;lotsahelp&quot;, &quot;login&quot;=&gt;&quot;lotsahelp&quot;, &quot;email&quot;=&gt;&quot;eric@erichumphrey.com&quot;, &quot;url&quot;=&gt;&quot;&quot;}</name><email>eric@erichumphrey.com</email></author><category term="dba" /><summary type="html">Argenis Fernandez (blog | twitter) is hosting the latest T-SQL Tuesday and asking about specialization. For the earlier part of my career I was doing application development while really wanting to do database work. I also learned plenty about systems administration while in college. The variety of the tasks made me a Jack of All Trades with a lean toward databases. I wanted to specialize as a DBA or DB developer, just the jobs were never there until I moved to a bigger market. When I was able to specialize, I was happy I could focus on one thing and get really deep with it. Now I am able to get deep with SQL Server, but I find myself constantly recalling information I learned in my previous positions to help with current issues. CLR, PowerShell, and little custom written utilities all draw from my .NET experience, which I am grateful for. I run into other DBAs that have no clue what goes on outside of their world. Having multiple skills allows me to create better solutions as I don't just consider what I'm responsible for, but all the connections to my piece as well. Being a generalist early in my career has allowed me better understanding of the whole stack of any given solution. It is easier for me to spot an integration problem or see a problem with an application's implementation than it would have been without that variety of experience. Jack of All Trades tend to be better at seeing the big picture as they don't focus on just one area. They can be the ones that help everything fit together better. Specialists are an important part of our ecosystem, but without someone to put the pieces together, you would have perfect components in a flawed system. Solutions really are greater than the sum of their parts.</summary></entry><entry><title type="html">Extract CLR Assemblies from SQL Server</title><link href="/clr/dba/powershell/2012/03/02/extract-clr-assemblies-from-sql-server.html" rel="alternate" type="text/html" title="Extract CLR Assemblies from SQL Server" /><published>2012-03-02T15:53:03-06:00</published><updated>2012-03-02T15:53:03-06:00</updated><id>/clr/dba/powershell/2012/03/02/extract-clr-assemblies-from-sql-server</id><content type="html" xml:base="/clr/dba/powershell/2012/03/02/extract-clr-assemblies-from-sql-server.html">&lt;p&gt;I've run into a few situations that required examining the existing CLR assemblies on a server. Whether I needed to do a comparison between two versions to make sure they are the same or confirm something in the assembly itself, this script has come in handy. Point it at a database, give it an output path and it will save all the assemblies in that database to dlls in the given folder. You can then use a .NET disassembler to confirm suspicions or a binary comparison to make sure the dll matches what it should.&lt;/p&gt;
+&lt;pre lang=&quot;powershell&quot;&gt;&amp;lt;#
+    .SYNOPSIS
+        Extracts CLR Assemblies from a SQL 2005+ database.
+
+    .DESCRIPTION
+        Extracts CLR Assemblies from a SQL 2005+ database.
+
+    .PARAMETER  ServerInstance
+        The Server\Instance to connect to
+    .PARAMETER  Database
+        The Database to extract assemblies from
+    .PARAMETER  OutPath
+        The path to output the assemblies
+
+    .EXAMPLE
+        PS C:\&amp;gt; .\Get-SqlAssemblies.ps1 -ServerInstance 'MyServer\MyInstance' -Database 'MyDatabase'
+        This example shows how to call Get-SqlAssemblies with named parameters.
+
+    .INPUTS
+        System.String
+
+    .NOTES
+        For more information about advanced functions, call Get-Help with any
+        of the topics in the links listed below.
+
+#&amp;gt;
+param(
+    [string]$ServerInstance = 'LOCALHOST',
+
+    [Parameter(Mandatory=$true)]
+    [string]$Database,
+
+    [string]$OutPath = '.'
+)
+
+#Correct for variations of incoming ServerInstance names
+if(-not $ServerInstance.Contains('\')) {$ServerInstance += '\DEFAULT'}
+if($ServerInstance.Contains(',') -and -not $ServerInstance.Contains('`,')) {$ServerInstance = $ServerInstance.Replace(',', '`,')}
+
+dir SQLSERVER:\SQL\$ServerInstance\Databases\$Database\Assemblies | %{
+    $_.SqlAssemblyFiles | %{
+        $str = $_.name
+        $path = Join-Path $OutPath ($str.Substring($str.LastIndexOf('\')+1))
+        Set-Content -Path $path -Value $_.GetFileBytes() -Encoding byte;
+    }
+}
+&lt;/pre&gt;</content><author><name>{&quot;display_name&quot;=&gt;&quot;lotsahelp&quot;, &quot;login&quot;=&gt;&quot;lotsahelp&quot;, &quot;email&quot;=&gt;&quot;eric@erichumphrey.com&quot;, &quot;url&quot;=&gt;&quot;&quot;}</name><email>eric@erichumphrey.com</email></author><category term="clr" /><category term="dba" /><category term="powershell" /><summary type="html">I've run into a few situations that required examining the existing CLR assemblies on a server. Whether I needed to do a comparison between two versions to make sure they are the same or confirm something in the assembly itself, this script has come in handy. Point it at a database, give it an output path and it will save all the assemblies in that database to dlls in the given folder. You can then use a .NET disassembler to confirm suspicions or a binary comparison to make sure the dll matches what it should. &amp;lt;# .SYNOPSIS Extracts CLR Assemblies from a SQL 2005+ database.</summary></entry><entry><title type="html">Split Typeperf Output in More Managable Chunks</title><link href="/dba/powershell/2012/02/17/split-typeperfoutput.html" rel="alternate" type="text/html" title="Split Typeperf Output in More Managable Chunks" /><published>2012-02-17T08:15:22-06:00</published><updated>2012-02-17T08:15:22-06:00</updated><id>/dba/powershell/2012/02/17/split-typeperfoutput</id><content type="html" xml:base="/dba/powershell/2012/02/17/split-typeperfoutput.html">&lt;p&gt;I really like using &lt;a href=&quot;http://technet.microsoft.com/en-us/library/bb490960.aspx&quot;&gt;typeperf&lt;/a&gt; for perfmon counter collection. It allows me to save a collection of counters to monitor and store those readings in a csv file for later analysis. Sometimes I end up running the output through the &lt;a href=&quot;http://pal.codeplex.com/&quot;&gt;PAL tool&lt;/a&gt;. Unfortunately, the PAL tool generates graphs that are fairly narrow. Monitoring sessions of long duration causes these graphs to be really cramped. I wanted a way to split the typeperf output to get a reasonable amount of data points in these graphs. A side benefit is the processing per file is a lot quicker.&lt;/p&gt;
+&lt;p&gt;The script takes a filepath as its only argument. It splits by the hour and copies the header row to each new file.&lt;/p&gt;
+&lt;pre lang=&quot;powershell&quot;&gt;param (
+	[string]$filepath #incoming file
+)
+
+#Does the file exist
+if (Test-Path $filepath) {
+	$infile = Get-Item $filepath
+	$data = Get-Content $infile
+}
+#if not, exit the script
+else {
+	Write-Warning &quot;Failed to find $filepath&quot;
+	exit
+}
+
+#Get the header to be able to repeat it in each file
+$header = $data | Select-Object -First 1
+$lastHour = $null
+$outFile = $null
+
+#Loop through the data, skipping the header line.
+$data | Select-Object -Skip 1 | ForEach-Object {
+	$date = [DateTime]::Parse([string]$_.Substring(1, [string]$_.IndexOf('&quot;',1)-1))
+	if($lastHour -eq $null -or $date.Hour -ne $lastHour.Hour -or $outFile -eq $null) {
+		$lastHour = $date.AddMinutes(-$date.Minute).AddSeconds(-$date.Second)
+		$outFile = Join-Path $infile.Directory (&quot;{0}_{1}{2}&quot; -f $infile.BaseName, $lastHour.ToString('yyyyMMdd_HHmmss'), $infile.extension)
+		$header | Out-File $outFile -Encoding UTF8
+	}
+	$_ | Out-File $outFile -Encoding UTF8 -Append
+}&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; I cleaned up the script a little based on Jeff's comments below.&lt;/p&gt;</content><author><name>{&quot;display_name&quot;=&gt;&quot;lotsahelp&quot;, &quot;login&quot;=&gt;&quot;lotsahelp&quot;, &quot;email&quot;=&gt;&quot;eric@erichumphrey.com&quot;, &quot;url&quot;=&gt;&quot;&quot;}</name><email>eric@erichumphrey.com</email></author><category term="dba" /><category term="powershell" /><summary type="html">I really like using typeperf for perfmon counter collection. It allows me to save a collection of counters to monitor and store those readings in a csv file for later analysis. Sometimes I end up running the output through the PAL tool. Unfortunately, the PAL tool generates graphs that are fairly narrow. Monitoring sessions of long duration causes these graphs to be really cramped. I wanted a way to split the typeperf output to get a reasonable amount of data points in these graphs. A side benefit is the processing per file is a lot quicker. The script takes a filepath as its only argument. It splits by the hour and copies the header row to each new file. param ( [string]$filepath #incoming file )</summary></entry><entry><title type="html">Automate CPU-Z Capture to Check for Throttled Processors</title><link href="/dba/powershell/2012/02/16/automate-cpuz.html" rel="alternate" type="text/html" title="Automate CPU-Z Capture to Check for Throttled Processors" /><published>2012-02-16T08:00:34-06:00</published><updated>2012-02-16T08:00:34-06:00</updated><id>/dba/powershell/2012/02/16/automate-cpuz</id><content type="html" xml:base="/dba/powershell/2012/02/16/automate-cpuz.html">&lt;p&gt;&lt;a href=&quot;http://www.sqlskills.com/blogs/paul/post/are-your-cpus-running-slowly-tool-tip-and-survey.aspx&quot;&gt;Several&lt;/a&gt; &lt;a href=&quot;http://www.brentozar.com/archive/2010/10/sql-server-on-powersaving-cpus-not-so-fast/&quot;&gt;professionals&lt;/a&gt; &lt;a href=&quot;http://colleenmorrow.com/2011/12/29/sql-server-a-to-z-cpu-z/&quot;&gt;have&lt;/a&gt; &lt;a href=&quot;http://sqlserverperformance.wordpress.com/tag/cpu-z/&quot;&gt;posted&lt;/a&gt; about checking whether or not your processors are running at full speed by using &lt;a href=&quot;http://www.cpuid.com/softwares/cpu-z.html&quot;&gt;CPU-Z&lt;/a&gt;. Some recommendations are to check your servers every couple of months or, if virtual, every time your guest moves. Me being &lt;del&gt;lazy&lt;/del&gt; efficient, I'd rather automate having these servers send me their info on a scheduled basis.&lt;/p&gt;
+&lt;p&gt;First things, first. Be sure to copy CPU-Z out to all your servers, preferably in a consistent folder. Edit the cpuz.ini file to turn off extra scanning (we just need the CPU info).&lt;/p&gt;
+&lt;pre lang=&quot;ini&quot;&gt;ACPI=0
+PCI=0
+DMI=0
+Sensor=0
+SMBus=0
+Display=0&lt;/pre&gt;
+&lt;p&gt;Save the following as a script and schedule it to run on a monthly or so basis using your favorite scheduler. The email portion was taken from &lt;a href=&quot;http://www.techrepublic.com/blog/window-on-windows/send-an-email-with-an-attachment-using-powershell/4969&quot;&gt;this post&lt;/a&gt;.&lt;/p&gt;
+&lt;pre lang=&quot;powershell&quot;&gt;&amp;amp; '.\cpuz64.exe' &quot;-txt=$env:COMPUTERNAME&quot;
+Start-Sleep -Seconds 15 #Give CPUZ enough time to generate output
+
+$smtpServer = &quot;127.0.0.1&quot;
+$msg = new-object Net.Mail.MailMessage
+$smtp = new-object Net.Mail.SmtpClient($smtpServer)
+$msg.From = &quot;emailadmin@test.com&quot;
+$msg.To.Add(&quot;administrator1@test.com&quot;)
+$msg.To.Add(&quot;administrator2@test.com&quot;)
+
+$msg.Subject = &quot;[CPU-Z] $env:COMPUTERNAME&quot;
+$msg.Body = gc &quot;$env:COMPUTERNAME.txt&quot; | ?{$_ -match &quot;(Specification|Core Speed|Stock frequency)&quot;}
+
+$smtp.Send($msg)&lt;/pre&gt;</content><author><name>{&quot;display_name&quot;=&gt;&quot;lotsahelp&quot;, &quot;login&quot;=&gt;&quot;lotsahelp&quot;, &quot;email&quot;=&gt;&quot;eric@erichumphrey.com&quot;, &quot;url&quot;=&gt;&quot;&quot;}</name><email>eric@erichumphrey.com</email></author><category term="dba" /><category term="powershell" /><summary type="html">Several professionals have posted about checking whether or not your processors are running at full speed by using CPU-Z. Some recommendations are to check your servers every couple of months or, if virtual, every time your guest moves. Me being lazy efficient, I'd rather automate having these servers send me their info on a scheduled basis. First things, first. Be sure to copy CPU-Z out to all your servers, preferably in a consistent folder. Edit the cpuz.ini file to turn off extra scanning (we just need the CPU info). ACPI=0 PCI=0 DMI=0 Sensor=0 SMBus=0 Display=0 Save the following as a script and schedule it to run on a monthly or so basis using your favorite scheduler. The email portion was taken from this post. &amp;amp; '.\cpuz64.exe' &quot;-txt=$env:COMPUTERNAME&quot; Start-Sleep -Seconds 15 #Give CPUZ enough time to generate output</summary></entry><entry><title type="html">Script level upgrade for database ‘master’ failed</title><link href="/clusters/dba/2011/11/09/script-level-upgrade-for-database-master-failed.html" rel="alternate" type="text/html" title="Script level upgrade for database ‘master’ failed" /><published>2011-11-09T10:17:04-06:00</published><updated>2011-11-09T10:17:04-06:00</updated><id>/clusters/dba/2011/11/09/script-level-upgrade-for-database-master-failed</id><content type="html" xml:base="/clusters/dba/2011/11/09/script-level-upgrade-for-database-master-failed.html">&lt;p&gt;A few weeks ago one of our clustered server nodes blue-screened and when it came back on SQL refused to start. I started digging in and this is what I found in the Event Log: &quot;Script level upgrade for database 'master' failed because upgrade step 'sqlagent100_msdb_upgrade.sql' encountered error 200, state 7, severity 25.&quot; Immediately I started to suspect a corrupt master database. And I found this in the SQL Error Log:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;Creating procedure sp_sqlagent_get_perf_counters...&lt;br /&gt;
+Error: 468, Severity: 16, State: 9.&lt;br /&gt;
+&lt;strong&gt;Cannot resolve the collation conflict between &quot;SQL_Latin1_General_CP1_CI_AS&quot; and &quot;Latin1_General_CI_AS&quot; in the equal to operation.&lt;/strong&gt;&lt;br /&gt;
+Error: 912, Severity: 21, State: 2.&lt;br /&gt;
+Script level upgrade for database 'master' failed because upgrade step 'sqlagent100_msdb_upgrade.sql' encountered error 200, state 7, severity 25. This is a serious error condition which might interfere with regular operation and the database will be taken offline. If the error happened during upgrade of the 'master' database, it will prevent the entire SQL Server instance from starting. Examine the previous errorlog entries for errors, take the appropriate corrective actions and re-start the database so that the script upgrade steps run to completion.&lt;br /&gt;
+Error: 3417, Severity: 21, State: 3.&lt;br /&gt;
+Cannot recover the master database. SQL Server is unable to run. Restore master from a full backup, repair it, or rebuild it. For more information about how to rebuild the master database, see SQL Server Books Online.&lt;br /&gt;
+SQL Trace was stopped due to server shutdown. Trace ID = '1'. This is an informational message only; preser action is required.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;It turns out that the collation of msdb did not match master. Master was using SQL_Latin1_General_CP1_CI_AS while only msdb and one other database was using&amp;nbsp;&amp;nbsp;Latin1_General_CI_AS. The upgrade script that SQL Server ran at startup performed a join across those two databases resulting in the error. I'm still not sure about why this script got run as no service packs / cumulative updates had been applied to this server recently&amp;nbsp;and it was originally installed as 2008, not an upgrade from 2005. With the upgrade script interrupted, it left the master db unusable.&lt;/p&gt;
+&lt;p&gt;I started going through the &lt;a href=&quot;http://msdn.microsoft.com/en-us/library/ms190679.aspx&quot;&gt;steps to restore master&lt;/a&gt;.&amp;nbsp;I was able to &lt;a href=&quot;http://msdn.microsoft.com/en-us/library/ms188236%28v=sql.100%29.aspx&quot;&gt;start the server in single user mode&lt;/a&gt;, yet I could never get in as the single user. Something seemed to always be taking the connection before I could get in.&lt;/p&gt;
+&lt;p&gt;I had a long, long conversation with the #sqlhelp folks on Twitter about this. All of these guys and gals were tossing out help:&amp;nbsp;@sqlinsaneo @kbriankelly @darrelllandrum @rusanu @DBArgenis @Kendra_Little @mrdenny @Bugboi @SQLSoldier. We stopped all services that were known to connect, stopped the browser service, changed the port, only allow IP connections, paused the cluster node I was working on, and still I was getting an error that only one admin was allowed at a time in single user mode.&lt;/p&gt;
+&lt;p&gt;Since I was getting nowhere fast, I decided on a different tact, namely to &lt;a href=&quot;https://blogs.msdn.com/themes/blogs/generic/post.aspx?WeblogApp=psssql&amp;amp;y=2008&amp;amp;m=08&amp;amp;d=29&amp;amp;WeblogPostName=how-to-rebuild-system-databases-in-sql-server-2008&amp;amp;GroupKeys=&quot;&gt;rebuild master&lt;/a&gt; then recover from backup. Rebuilding master was a fairly quick process. An important note about rebuilding master is that is also rebuilds msdb. Now I had two databases to recover from backup. Once the rebuild was complete, I was successfully able to&amp;nbsp;start the service in single user mode &amp;nbsp;and was able to connect (yay!!!). Now I could restore a backup of master, restart SQL normally and restore msdb. I finally had a running instance 2.5 hours later.&lt;/p&gt;
+&lt;p&gt;Important lessons learned from this experience:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If single user mode isn't working and you have a good backup of msdb, rebuild then recover. Rebuilding might fix some issues and get you on the road to recovery quicker.&lt;/li&gt;
+&lt;li&gt;Collations of all the system databases really should match. This whole issue was because of a collation conflict between master and msdb.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;Thanks again to:&lt;/div&gt;
+&lt;div&gt;
+&lt;ul&gt;
+&lt;li&gt;Allen Kinsel (&lt;a href=&quot;http://www.allenkinsel.com&quot;&gt;blog&lt;/a&gt; | &lt;a href=&quot;http://twitter.com/#!/sqlinsaneo&quot;&gt;twitter&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;K. Brian Kelley (&lt;a href=&quot;http://www.truthsolutions.com&quot;&gt;blog&lt;/a&gt; | &lt;a href=&quot;http://twitter.com/#!/kbriankelley&quot;&gt;twitter&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Darrell Landrum (&lt;a href=&quot;http://twitter.com/#!/darrelllandrum&quot;&gt;twitter&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Remus Rusanu (&lt;a href=&quot;http://rusanu.com&quot;&gt;blog&lt;/a&gt; | &lt;a href=&quot;http://twitter.com/#!/rusanu&quot;&gt;twitter&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Argenis Fernandez (&lt;a href=&quot;http://www.sqlblog.com/blogs/argenis_fernandez&quot;&gt;blog&lt;/a&gt; | &lt;a href=&quot;http://twitter.com/#!/DBArgenis&quot;&gt;twitter&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Kendra Little (&lt;a href=&quot;http://littlekendra.com&quot;&gt;blog&lt;/a&gt; | &lt;a href=&quot;http://twitter.com/#!/Kendra_Little&quot;&gt;twitter&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Denny Cherry (&lt;a href=&quot;http://www.mrdenny.com&quot;&gt;blog&lt;/a&gt; | &lt;a href=&quot;http://twitter.com/#!/mrdenny&quot;&gt;twitter&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Bugboi (&lt;a href=&quot;http://twitter.com/#!/Bugboi&quot;&gt;twitter&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Robert Davis (&lt;a href=&quot;http://www.sqlsoldier.com&quot;&gt;blog&lt;/a&gt; | &lt;a href=&quot;http://twitter.com/#!/SQLSoldier&quot;&gt;twitter&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;</content><author><name>{&quot;display_name&quot;=&gt;&quot;lotsahelp&quot;, &quot;login&quot;=&gt;&quot;lotsahelp&quot;, &quot;email&quot;=&gt;&quot;eric@erichumphrey.com&quot;, &quot;url&quot;=&gt;&quot;&quot;}</name><email>eric@erichumphrey.com</email></author><category term="clusters" /><category term="dba" /><summary type="html">A few weeks ago one of our clustered server nodes blue-screened and when it came back on SQL refused to start. I started digging in and this is what I found in the Event Log: &quot;Script level upgrade for database 'master' failed because upgrade step 'sqlagent100_msdb_upgrade.sql' encountered error 200, state 7, severity 25.&quot; Immediately I started to suspect a corrupt master database. And I found this in the SQL Error Log: Creating procedure sp_sqlagent_get_perf_counters... Error: 468, Severity: 16, State: 9. Cannot resolve the collation conflict between &quot;SQL_Latin1_General_CP1_CI_AS&quot; and &quot;Latin1_General_CI_AS&quot; in the equal to operation. Error: 912, Severity: 21, State: 2. Script level upgrade for database 'master' failed because upgrade step 'sqlagent100_msdb_upgrade.sql' encountered error 200, state 7, severity 25. This is a serious error condition which might interfere with regular operation and the database will be taken offline. If the error happened during upgrade of the 'master' database, it will prevent the entire SQL Server instance from starting. Examine the previous errorlog entries for errors, take the appropriate corrective actions and re-start the database so that the script upgrade steps run to completion. Error: 3417, Severity: 21, State: 3. Cannot recover the master database. SQL Server is unable to run. Restore master from a full backup, repair it, or rebuild it. For more information about how to rebuild the master database, see SQL Server Books Online. SQL Trace was stopped due to server shutdown. Trace ID = '1'. This is an informational message only; preser action is required. It turns out that the collation of msdb did not match master. Master was using SQL_Latin1_General_CP1_CI_AS while only msdb and one other database was using&amp;nbsp;&amp;nbsp;Latin1_General_CI_AS. The upgrade script that SQL Server ran at startup performed a join across those two databases resulting in the error. I'm still not sure about why this script got run as no service packs / cumulative updates had been applied to this server recently&amp;nbsp;and it was originally installed as 2008, not an upgrade from 2005. With the upgrade script interrupted, it left the master db unusable. I started going through the steps to restore master.&amp;nbsp;I was able to start the server in single user mode, yet I could never get in as the single user. Something seemed to always be taking the connection before I could get in. I had a long, long conversation with the #sqlhelp folks on Twitter about this. All of these guys and gals were tossing out help:&amp;nbsp;@sqlinsaneo @kbriankelly @darrelllandrum @rusanu @DBArgenis @Kendra_Little @mrdenny @Bugboi @SQLSoldier. We stopped all services that were known to connect, stopped the browser service, changed the port, only allow IP connections, paused the cluster node I was working on, and still I was getting an error that only one admin was allowed at a time in single user mode. Since I was getting nowhere fast, I decided on a different tact, namely to rebuild master then recover from backup. Rebuilding master was a fairly quick process. An important note about rebuilding master is that is also rebuilds msdb. Now I had two databases to recover from backup. Once the rebuild was complete, I was successfully able to&amp;nbsp;start the service in single user mode &amp;nbsp;and was able to connect (yay!!!). Now I could restore a backup of master, restart SQL normally and restore msdb. I finally had a running instance 2.5 hours later. Important lessons learned from this experience: If single user mode isn't working and you have a good backup of msdb, rebuild then recover. Rebuilding might fix some issues and get you on the road to recovery quicker. Collations of all the system databases really should match. This whole issue was because of a collation conflict between master and msdb. Thanks again to: Allen Kinsel (blog | twitter) K. Brian Kelley (blog | twitter) Darrell Landrum (twitter) Remus Rusanu (blog | twitter) Argenis Fernandez (blog | twitter) Kendra Little (blog | twitter) Denny Cherry (blog | twitter) Bugboi (twitter) Robert Davis (blog | twitter)</summary></entry></feed>

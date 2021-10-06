@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Extract CLR Assemblies from SQL Server | Your awesome title</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Extract CLR Assemblies from SQL Server" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I&#39;ve run into a few situations that required examining the existing CLR assemblies on a server. Whether I needed to do a comparison between two versions to make sure they are the same or confirm something in the assembly itself, this script has come in handy. Point it at a database, give it an output path and it will save all the assemblies in that database to dlls in the given folder. You can then use a .NET disassembler to confirm suspicions or a binary comparison to make sure the dll matches what it should. &lt;# .SYNOPSIS Extracts CLR Assemblies from a SQL 2005+ database." />
+<meta property="og:description" content="I&#39;ve run into a few situations that required examining the existing CLR assemblies on a server. Whether I needed to do a comparison between two versions to make sure they are the same or confirm something in the assembly itself, this script has come in handy. Point it at a database, give it an output path and it will save all the assemblies in that database to dlls in the given folder. You can then use a .NET disassembler to confirm suspicions or a binary comparison to make sure the dll matches what it should. &lt;# .SYNOPSIS Extracts CLR Assemblies from a SQL 2005+ database." />
+<link rel="canonical" href="/clr/dba/powershell/2012/03/02/extract-clr-assemblies-from-sql-server.html" />
+<meta property="og:url" content="/clr/dba/powershell/2012/03/02/extract-clr-assemblies-from-sql-server.html" />
+<meta property="og:site_name" content="Your awesome title" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2012-03-02T15:53:03-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Extract CLR Assemblies from SQL Server" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"/clr/dba/powershell/2012/03/02/extract-clr-assemblies-from-sql-server.html","headline":"Extract CLR Assemblies from SQL Server","dateModified":"2012-03-02T15:53:03-06:00","datePublished":"2012-03-02T15:53:03-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"/clr/dba/powershell/2012/03/02/extract-clr-assemblies-from-sql-server.html"},"description":"I&#39;ve run into a few situations that required examining the existing CLR assemblies on a server. Whether I needed to do a comparison between two versions to make sure they are the same or confirm something in the assembly itself, this script has come in handy. Point it at a database, give it an output path and it will save all the assemblies in that database to dlls in the given folder. You can then use a .NET disassembler to confirm suspicions or a binary comparison to make sure the dll matches what it should. &lt;# .SYNOPSIS Extracts CLR Assemblies from a SQL 2005+ database.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Your awesome title" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Your awesome title</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/about/">About</a><a class="page-link" href="/contact-me/">Contact Me</a><a class="page-link" href="/privacy-policy/">Privacy Policy</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Extract CLR Assemblies from SQL Server</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2012-03-02T15:53:03-06:00" itemprop="datePublished">Mar 2, 2012
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{"display_name"=>"lotsahelp", "login"=>"lotsahelp", "email"=>"eric@erichumphrey.com", "url"=>""}</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>I've run into a few situations that required examining the existing CLR assemblies on a server. Whether I needed to do a comparison between two versions to make sure they are the same or confirm something in the assembly itself, this script has come in handy. Point it at a database, give it an output path and it will save all the assemblies in that database to dlls in the given folder. You can then use a .NET disassembler to confirm suspicions or a binary comparison to make sure the dll matches what it should.</p>
+<pre lang="powershell">&lt;#
+    .SYNOPSIS
+        Extracts CLR Assemblies from a SQL 2005+ database.
+
+    .DESCRIPTION
+        Extracts CLR Assemblies from a SQL 2005+ database.
+
+    .PARAMETER  ServerInstance
+        The Server\Instance to connect to
+    .PARAMETER  Database
+        The Database to extract assemblies from
+    .PARAMETER  OutPath
+        The path to output the assemblies
+
+    .EXAMPLE
+        PS C:\&gt; .\Get-SqlAssemblies.ps1 -ServerInstance 'MyServer\MyInstance' -Database 'MyDatabase'
+        This example shows how to call Get-SqlAssemblies with named parameters.
+
+    .INPUTS
+        System.String
+
+    .NOTES
+        For more information about advanced functions, call Get-Help with any
+        of the topics in the links listed below.
+
+#&gt;
+param(
+    [string]$ServerInstance = 'LOCALHOST',
+
+    [Parameter(Mandatory=$true)]
+    [string]$Database,
+
+    [string]$OutPath = '.'
+)
+
+#Correct for variations of incoming ServerInstance names
+if(-not $ServerInstance.Contains('\')) {$ServerInstance += '\DEFAULT'}
+if($ServerInstance.Contains(',') -and -not $ServerInstance.Contains('`,')) {$ServerInstance = $ServerInstance.Replace(',', '`,')}
+
+dir SQLSERVER:\SQL\$ServerInstance\Databases\$Database\Assemblies | %{
+    $_.SqlAssemblyFiles | %{
+        $str = $_.name
+        $path = Join-Path $OutPath ($str.Substring($str.LastIndexOf('\')+1))
+        Set-Content -Path $path -Value $_.GetFileBytes() -Encoding byte;
+    }
+}
+</pre>
+
+  </div><a class="u-url" href="/clr/dba/powershell/2012/03/02/extract-clr-assemblies-from-sql-server.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Your awesome title</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Your awesome title</li><li><a class="u-email" href="mailto:your-email@example.com">your-email@example.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/jekyll"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">jekyll</span></a></li><li><a href="https://www.twitter.com/jekyllrb"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">jekyllrb</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
