@@ -1,24 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Script level upgrade for database 'master' failed
-author:
-  display_name: lotsahelp
-  login: lotsahelp
-  email: eric@erichumphrey.com
-  url: ''
-author_login: lotsahelp
-author_email: eric@erichumphrey.com
-wordpress_id: 248
-wordpress_url: http://www.erichumphrey.com/?p=248
 date: '2011-11-09 10:17:04 -0600'
-date_gmt: '2011-11-09 16:17:04 -0600'
 categories:
 - clusters
 - dba
-tags: []
-comments: []
 ---
 <p>A few weeks ago one of our clustered server nodes blue-screened and when it came back on SQL refused to start. I started digging in and this is what I found in the Event Log: "Script level upgrade for database 'master' failed because upgrade step 'sqlagent100_msdb_upgrade.sql' encountered error 200, state 7, severity 25." Immediately I started to suspect a corrupt master database. And I found this in the SQL Error Log:</p>
 <blockquote><p>Creating procedure sp_sqlagent_get_perf_counters...<br />
