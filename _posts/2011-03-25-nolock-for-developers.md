@@ -1,44 +1,12 @@
 ---
 layout: post
-status: publish
-published: true
 title: NOLOCK for Developers
-author:
-  display_name: lotsahelp
-  login: lotsahelp
-  email: eric@erichumphrey.com
-  url: ''
-author_login: lotsahelp
-author_email: eric@erichumphrey.com
-wordpress_id: 143
-wordpress_url: http://www.erichumphrey.com/?p=143
 date: '2011-03-25 07:20:47 -0500'
-date_gmt: '2011-03-25 13:20:47 -0500'
 categories:
 - dba
 - development
 - sql
 - SQLServerPedia Syndication
-tags: []
-comments:
-- id: 60
-  author: Shannon Lowder
-  author_email: slowder@toyboxcreations.net
-  author_url: http://shannonlowder.com
-  date: '2011-03-25 07:37:45 -0500'
-  date_gmt: '2011-03-25 13:37:45 -0500'
-  content: |-
-    I've also found a situation where a NOLOCK can actually cause blocking on INSERT statements.  I'd have to dig for my exact scenario, but I do remember if you select with NOLOCK on a table that also has an index, the schema lock that NOLOCK holds prevents inserts from occuring until the NOLOCK query has completed.  It was wild when I was able to see it, and even more so when others in the forum could reproduce the scenario too.
-
-    Yet another reason NOLOCKs need to be used less than they are in the development.
-- id: 61
-  author: NOLOCK Sprinkles | SQLseeker.com
-  author_email: ''
-  author_url: http://sqlseeker.com/archive/2012/06/nolock-sprinkles/
-  date: '2012-06-10 14:18:24 -0500'
-  date_gmt: '2012-06-10 20:18:24 -0500'
-  content: "[...] http://www.erichumphrey.com/2011/03/nolock-for-developers/ http://michaeljswart.com/tag/nolock-read-uncommitted/
-    \  This entry was posted in SQL and tagged [...]"
 ---
 <p><span style="font-size: 20px; font-weight: bold;">What is NOLOCK?</span></p>
 <p>NOLOCK is a table hint for SQL Server that tells the engine to not take locks and ignore any locks when querying that table. This is equivalent to the READUNCOMMITTED table hint.</p>

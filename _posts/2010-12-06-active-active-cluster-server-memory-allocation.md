@@ -1,26 +1,12 @@
 ---
 layout: post
-status: publish
-published: true
 title: Active / Active Cluster Server Memory Allocation
-author:
-  display_name: lotsahelp
-  login: lotsahelp
-  email: eric@erichumphrey.com
-  url: ''
-author_login: lotsahelp
-author_email: eric@erichumphrey.com
-wordpress_id: 24
-wordpress_url: http://www.erichumphrey.com/2010/12/active-active-cluster-server-memory-allocation/
 date: '2010-12-06 20:10:00 -0600'
-date_gmt: '2010-12-07 02:10:00 -0600'
 categories:
 - clusters
 - dba
 - powershell
 - sql
-tags: []
-comments: []
 ---
 <p>We have several active / active clusters with multiple instances per node in our environment. We want to ensure the instances are spread as evenly as possible across the nodes. I wrote a quick PowerShell script to go through a text file and get the physical node where the instance is running, how much physical memory the node has and how much memory the instance is configured to use.</p>
 <p>Just create a text file "servers.txt" with the list of instances on a cluster and run the following.</p>

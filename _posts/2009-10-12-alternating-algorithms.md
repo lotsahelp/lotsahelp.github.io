@@ -1,23 +1,9 @@
 ---
 layout: post
-status: publish
-published: true
 title: Alternating Algorithms
-author:
-  display_name: lotsahelp
-  login: lotsahelp
-  email: eric@erichumphrey.com
-  url: ''
-author_login: lotsahelp
-author_email: eric@erichumphrey.com
-wordpress_id: 10
-wordpress_url: http://www.erichumphrey.com/2009/10/alternating-algorithms/
 date: '2009-10-12 11:33:00 -0500'
-date_gmt: '2009-10-12 17:33:00 -0500'
 categories:
 - code optimization
-tags: []
-comments: []
 ---
 <p><span style="font-family: inherit;">I picked this tip up a while back while reading a book about code quality. This was a trick back in the C days.</span>
 <div><span style="font-family: inherit;"><br /></span></div>
@@ -32,7 +18,7 @@ comments: []
 <div><span style="font-family: 'Courier New', Courier, monospace;">&nbsp;&nbsp;x++;</span></div>
 <div><span style="font-family: 'Courier New', Courier, monospace;">}</span></div>
 <div><span style="font-family: inherit;"><br /></span></div>
-<div><span style="font-family: inherit;">That works, but your doing a modulus function and an addition just to toggle between values.</span></div>
+<div><span style="font-family: inherit;">That works, but you're doing a modulus function and an addition just to toggle between values.</span></div>
 <div><span style="font-family: inherit;"><br /></span></div>
 <div><span style="font-family: inherit;">Instead I use this:</span></div>
 <div><span style="font-family: 'Courier New', Courier, monospace;">int x = 0;</span></div>

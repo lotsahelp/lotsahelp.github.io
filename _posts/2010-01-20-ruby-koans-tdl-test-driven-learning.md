@@ -1,24 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Ruby Koans - TDL (Test Driven Learning)
-author:
-  display_name: lotsahelp
-  login: lotsahelp
-  email: eric@erichumphrey.com
-  url: ''
-author_login: lotsahelp
-author_email: eric@erichumphrey.com
-wordpress_id: 12
-wordpress_url: http://www.erichumphrey.com/2010/01/ruby-koans-tdl-test-driven-learning/
 date: '2010-01-20 15:42:00 -0600'
-date_gmt: '2010-01-20 21:42:00 -0600'
 categories:
 - learning
 - ruby
-tags: []
-comments: []
 ---
 <p>This past weekend I attended the <a href="http://www.wearemicrosoft.com/">We Are Microsoft</a> <a href="http://givecamp.org/">Give Camp</a> in Dallas with some friends. We live 6 hours away, but did it last year and decided to again this year. When we stopped for lunch <a href="http://www.jaysmith.us/">Jay Smith</a> brought up <a href="http://github.com/edgecase/ruby_koans">Ruby Koans</a>, a project designed to teach Ruby by using TDD. (What is a <a href="http://en.wikipedia.org/wiki/Koan">Koan</a>?) There was some good discussion on the topic which piqued my interest.</p>
 <p>Since I do app / web development as well as SQL, I decided when I got home to download it and give it a shot. So far, I think it does a good job of teaching Ruby, with tests first. I think sometimes the answers are a little too apparent, but it essentially acts as a truly interactive tutorial.</p>

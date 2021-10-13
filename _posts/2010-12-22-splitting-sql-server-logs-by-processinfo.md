@@ -1,24 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: Splitting SQL Server Logs by ProcessInfo
-author:
-  display_name: lotsahelp
-  login: lotsahelp
-  email: eric@erichumphrey.com
-  url: ''
-author_login: lotsahelp
-author_email: eric@erichumphrey.com
-wordpress_id: 27
-wordpress_url: http://www.erichumphrey.com/2010/12/splitting-sql-server-logs-by-processinfo/
 date: '2010-12-22 19:04:00 -0600'
-date_gmt: '2010-12-23 01:04:00 -0600'
 categories:
 - powershell
 - sql
-tags: []
-comments: []
 ---
 <p>I wanted a way to parse through my SQL logs and be able to look at one particular spid or ProcessInfo class such as Server, Backup, Logon, etc. I came up with the following PowerShell script: *You must have either trace flag 1204 and/or 1222 turned on. (<a href="http://msdn.microsoft.com/en-us/library/ms178104.aspx">More info</a>)</p>
 <pre lang="powershell">param($path)

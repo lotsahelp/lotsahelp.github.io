@@ -1,33 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: SQLskills Immersion Event on Internals and Performance - Day 4
-author:
-  display_name: lotsahelp
-  login: lotsahelp
-  email: eric@erichumphrey.com
-  url: ''
-author_login: lotsahelp
-author_email: eric@erichumphrey.com
-wordpress_id: 138
-wordpress_url: http://www.erichumphrey.com/?p=138
 date: '2011-02-24 21:55:39 -0600'
-date_gmt: '2011-02-25 03:55:39 -0600'
 categories:
 - dba
 - learning
-tags: []
-comments:
-- id: 58
-  author: Our February Immersion Event in Dallas, TX &#8211; Final Wrap-up | Kimberly
-    L. Tripp
-  author_email: ''
-  author_url: http://wp.sqlskills.com/blogs/kimberly/our-february-immersion-event-in-dallas-tx-final-wrap-up/
-  date: '2013-01-02 08:54:01 -0600'
-  date_gmt: '2013-01-02 14:54:01 -0600'
-  content: "[...] SQLskills Immersion Event on Internals and Performance &ndash; Day
-    4 [...]"
 ---
 <h3>Overview</h3>
 <p>We just finished the fourth day of SQLskills learning. Today was all on indexes and statistics. We learned about choosing a clustering key, what makes a good one, what makes a bad one. We also have to keep in mind the consequences to non-clustered indexes when choosing the clustered index. We learned about why SQL will choose to use a certain index and why it might use one we wouldn't expect.</p>

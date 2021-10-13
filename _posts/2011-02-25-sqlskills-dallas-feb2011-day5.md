@@ -1,33 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: SQLskills Immersion Event on Internals and Performance - Day 5
-author:
-  display_name: lotsahelp
-  login: lotsahelp
-  email: eric@erichumphrey.com
-  url: ''
-author_login: lotsahelp
-author_email: eric@erichumphrey.com
-wordpress_id: 140
-wordpress_url: http://www.erichumphrey.com/?p=140
 date: '2011-02-25 21:17:42 -0600'
-date_gmt: '2011-02-26 03:17:42 -0600'
 categories:
 - dba
 - learning
-tags: []
-comments:
-- id: 59
-  author: Our February Immersion Event in Dallas, TX &#8211; Final Wrap-up | Kimberly
-    L. Tripp
-  author_email: ''
-  author_url: http://wp.sqlskills.com/blogs/kimberly/our-february-immersion-event-in-dallas-tx-final-wrap-up/
-  date: '2013-01-02 08:32:49 -0600'
-  date_gmt: '2013-01-02 14:32:49 -0600'
-  content: "[...] SQLskills Immersion Event on Internals and Performance &ndash; Day
-    5 [...]"
 ---
 <h3>Overview</h3>
 <p>Today was the fifth and final day of the Internals &amp; Performance immersion event. I have really enjoyed learning from not only Paul and Kimberly, but my classmates as well. There were many smart people in that room and hearing each others' perspectives is a part of the class that I'm glad is there. I want to thank Paul and Kimberly for doing these events. I also want to thank my employer for sending me.</p>

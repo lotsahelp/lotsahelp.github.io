@@ -1,36 +1,15 @@
 ---
 layout: post
-status: publish
-published: true
 title: I Need a Reading Plan
-author:
-  display_name: lotsahelp
-  login: lotsahelp
-  email: eric@erichumphrey.com
-  url: ''
-author_login: lotsahelp
-author_email: eric@erichumphrey.com
-wordpress_id: 9
-wordpress_url: http://www.erichumphrey.com/2009/05/i-need-a-reading-plan/
 date: '2009-05-05 17:25:00 -0500'
-date_gmt: '2009-05-05 23:25:00 -0500'
 categories:
 - certification
 - plan
 - reading
-tags: []
-comments:
-- id: 3
-  author: Tim Tyrrell
-  author_email: ''
-  author_url: ''
-  date: '2009-05-05 19:04:00 -0500'
-  date_gmt: '2009-05-06 01:04:00 -0500'
-  content: Stop posting and get reading!
 ---
-<p>A couple of weeks ago some guys from my team and I decided to do a study group for .NET 3.5 certification. I already had my MCSA (2003) and MCDBA (2000) certs so I figured I would at least update my SQL to 2005 at the same time since my interest has flourished in that area. I also have another, albeit short, book I&rsquo;m reading to understand business drivers. So, I have 3 books I&rsquo;m trying to read all at the same time. I need a plan.
-<div></div>
-<div>I chose SQL 2005 since that is what my company mainly uses. I will then upgrade to 2008 to prepare for the future.</p>
+A couple of weeks ago some guys from my team and I decided to do a study group for .NET 3.5 certification. I already had my MCSA (2003) and MCDBA (2000) certs so I figured I would at least update my SQL to 2005 at the same time since my interest has flourished in that area. I also have another, albeit short, book I'm reading to understand business drivers. So, I have 3 books I'm trying to read all at the same time. I need a plan.
+
+I chose SQL 2005 since that is what my company mainly uses. I will then upgrade to 2008 to prepare for the future.
 <table>
 <tbody></tbody>
 <tbody>
@@ -55,6 +34,4 @@ comments:
 <td>Wednesday, 1 chapter</td>
 </tr>
 </tbody>
-<tbody></tbody>
 </table>
-</div>

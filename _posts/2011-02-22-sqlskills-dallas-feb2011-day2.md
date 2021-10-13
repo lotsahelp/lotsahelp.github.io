@@ -1,50 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: SQLskills Immersion Event on Internals and Performance - Day 2
-author:
-  display_name: lotsahelp
-  login: lotsahelp
-  email: eric@erichumphrey.com
-  url: ''
-author_login: lotsahelp
-author_email: eric@erichumphrey.com
-wordpress_id: 117
-wordpress_url: http://www.erichumphrey.com/?p=117
 date: '2011-02-22 21:08:54 -0600'
-date_gmt: '2011-02-23 03:08:54 -0600'
 categories:
 - dba
 - learning
-tags: []
-comments:
-- id: 52
-  author: Tweets that mention Eric Humphrey &raquo; SQLskills Immersion Event on Internals
-    and Performance &ndash; Day 2 -- Topsy.com
-  author_email: ''
-  author_url: http://topsy.com/www.erichumphrey.com/2011/02/sqlskills-dallas-feb2011-day2/?utm_source=pingback&amp;utm_campaign=L2
-  date: '2011-02-23 08:58:10 -0600'
-  date_gmt: '2011-02-23 14:58:10 -0600'
-  content: "[...] This post was mentioned on Twitter by Eric Humphrey, vickyharp.
-    vickyharp said: RT @lotsahelp: [Blog] SQLskills Immersion Event on Internals and
-    Performance - Day 2 http://bit.ly/hmsxf3 #sqlblog [...]"
-- id: 53
-  author: Claire
-  author_email: clairew@softartisans.com
-  author_url: http://blogs.softartisans.com
-  date: '2011-02-23 09:46:08 -0600'
-  date_gmt: '2011-02-23 15:46:08 -0600'
-  content: Wow, shipping your own whiteboards definitely qualifies as going the distance!
-- id: 54
-  author: Our February Immersion Event in Dallas, TX &#8211; Final Wrap-up | Kimberly
-    L. Tripp
-  author_email: ''
-  author_url: http://wp.sqlskills.com/blogs/kimberly/our-february-immersion-event-in-dallas-tx-final-wrap-up/
-  date: '2013-01-02 08:53:08 -0600'
-  date_gmt: '2013-01-02 14:53:08 -0600'
-  content: "[...] SQLskills Immersion Event on Internals and Performance &ndash; Day
-    2 [...]"
 ---
 <h3>Overview</h3>
 <p>Day two of the SQLskills Immersion Event is over and I have listed the interesting parts below. The food, again, was great, except for the lack of danishes during breakfast (I really like those). Today I got see Kimberly's teaching style. She's a fast talker, so you better keep up. Sadly I was a bit more sleepy in class today, though that's not a reflection on Kimberly. I keep waiting for Kimberly to go into a Joan Cusack type rant, she just has those mannerisms.&nbsp;To tell you how much this couple cares about teaching and the value of whiteboards... <strong>they shipped their own 2 boards</strong> down here from Washington state, even through what seemed like a pretty big hassle.</p>

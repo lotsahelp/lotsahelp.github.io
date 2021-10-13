@@ -1,40 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Automate Downloading SQL Cumulative Updates
-author:
-  display_name: lotsahelp
-  login: lotsahelp
-  email: eric@erichumphrey.com
-  url: ''
-author_login: lotsahelp
-author_email: eric@erichumphrey.com
-wordpress_id: 50
-wordpress_url: http://www.erichumphrey.com/?p=50
 date: '2011-01-04 08:30:26 -0600'
-date_gmt: '2011-01-04 14:30:26 -0600'
 categories:
 - download script
 - powershell
 - SQLServerPedia Syndication
-tags: []
-comments:
-- id: 35
-  author: kiquenet
-  author_email: kiquenet+erichumphrey@gmail.com
-  author_url: ''
-  date: '2013-08-08 03:28:00 -0500'
-  date_gmt: '2013-08-08 09:28:00 -0500'
-  content: HOw can I get msg file from any message in Outlook using Powershell?
-- id: 36
-  author: lotsahelp
-  author_email: eric.humphrey@gmail.com
-  author_url: http://www.erichumphrey.com
-  date: '2013-08-13 10:40:39 -0500'
-  date_gmt: '2013-08-13 16:40:39 -0500'
-  content: You can get the .msg file by saving the email out of Outlook or drag /
-    drop the email to your desktop.
 ---
 <p>Those of us admins that download each SQL Cumulative Update when it comes out may find this script handy. When you request a CU from Microsoft, you get this plain text email with links and passwords. Each link is to a different self-extracting zip file with the corresponding password below it.</p>
 <p>When a CU has many files, it becomes a long series of point-and-click to download them all. Then you have to manually put in the password to each file in order to extract it. I wanted an easier solution.</p>

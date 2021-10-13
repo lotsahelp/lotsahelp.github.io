@@ -1,33 +1,10 @@
 ---
 layout: post
-status: publish
-published: true
 title: SQLskills Immersion Event on Internals and Performance - Day 3
-author:
-  display_name: lotsahelp
-  login: lotsahelp
-  email: eric@erichumphrey.com
-  url: ''
-author_login: lotsahelp
-author_email: eric@erichumphrey.com
-wordpress_id: 126
-wordpress_url: http://www.erichumphrey.com/?p=126
 date: '2011-02-23 19:52:28 -0600'
-date_gmt: '2011-02-24 01:52:28 -0600'
 categories:
 - dba
 - learning
-tags: []
-comments:
-- id: 57
-  author: Our February Immersion Event in Dallas, TX &#8211; Final Wrap-up | Kimberly
-    L. Tripp
-  author_email: ''
-  author_url: http://wp.sqlskills.com/blogs/kimberly/our-february-immersion-event-in-dallas-tx-final-wrap-up/
-  date: '2013-01-02 08:53:36 -0600'
-  date_gmt: '2013-01-02 14:53:36 -0600'
-  content: "[...] SQLskills Immersion Event on Internals and Performance &ndash; Day
-    3 [...]"
 ---
 <h3>Overview</h3>
 <p>Today was mostly about Table Design, Partitioning, with a little of Indexing. Partitioning is a big, complex topics with a lot of intricate details and interactions. If you are thinking about implementing partitioning using either partitioned tables or partitioned views, do your homework. Don't just implement either without knowing the background of both. This is not a simple subject.</p>

@@ -1,31 +1,9 @@
 ---
 layout: post
-status: publish
-published: true
 title: Have SQL Demand Application Identification
-author:
-  display_name: lotsahelp
-  login: lotsahelp
-  email: eric@erichumphrey.com
-  url: ''
-author_login: lotsahelp
-author_email: eric@erichumphrey.com
-wordpress_id: 11
-wordpress_url: http://www.erichumphrey.com/2009/11/have-sql-demand-application-identification/
 date: '2009-11-24 08:27:00 -0600'
-date_gmt: '2009-11-24 14:27:00 -0600'
 categories:
-- sql triggers
-tags: []
-comments:
-- id: 4
-  author: Eric Humphrey &raquo; Prevent SQL Logins from using SSMS &#8230; or any
-    other app
-  author_email: ''
-  author_url: http://www.erichumphrey.com/2011/06/prevent-sql-logins-from-using-ssms/
-  date: '2011-06-17 20:21:04 -0500'
-  date_gmt: '2011-06-18 02:21:04 -0500'
-  content: "[...] In a continuation of my previous LOGON TRIGGER post. [...]"
+- sql
 ---
 <p>How many times have you run Profiler on your SQL Servers to see this?</p>
 <p><a style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;" href="http://2.bp.blogspot.com/_OEOq9aEto20/SwvqsplCArI/AAAAAAAADDI/09TjlPbCays/s1600/Profiler+pic+cropped.png"><img src="http://2.bp.blogspot.com/_OEOq9aEto20/SwvqsplCArI/AAAAAAAADDI/09TjlPbCays/s400/Profiler+pic+cropped.png" border="0" alt="" /></a></p>

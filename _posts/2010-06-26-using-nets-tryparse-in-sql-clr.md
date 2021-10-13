@@ -1,37 +1,12 @@
 ---
 layout: post
-status: publish
-published: true
 title: Using .NET's TryParse() in SQL CLR
-author:
-  display_name: lotsahelp
-  login: lotsahelp
-  email: eric@erichumphrey.com
-  url: ''
-author_login: lotsahelp
-author_email: eric@erichumphrey.com
-wordpress_id: 16
-wordpress_url: http://www.erichumphrey.com/2010/06/using-nets-tryparse-in-sql-clr/
 date: '2010-06-26 11:53:00 -0500'
-date_gmt: '2010-06-26 17:53:00 -0500'
 categories:
 - ".net"
 - c#
 - clr
 - sql
-tags: []
-comments:
-- id: 8
-  author: Graham
-  author_email: graham.monkman@concertosupport.co.uk
-  author_url: ''
-  date: '2012-03-02 07:38:37 -0600'
-  date_gmt: '2012-03-02 13:38:37 -0600'
-  content: "Great easy to follow walk-thru.\n\nWould like just to add that depending
-    on the state of the data, it can be worth checking that dtvalue is within the
-    max and min of an sqldatetime (otherwise you get an error).\n\n                if
-    (dtValue >= SqlDateTime.MinValue &amp;&amp; dtValue <= SqlDateTime.MaxValue) \n
-    \                   return (DateTime)dtValue;"
 ---
 <p>In my current position, I deal with a lot of data quality issues. This column should be a date, but we get an integer, string, NULLs, etc. As a rule of our processing, if we cannot convert the value to the appropriate data type, then we use a default value, or choice of values depending on the situation.</p>
 <p>SQL Server already has the CAST and CONVERT functions built in. There is a shortcoming of these functions though. If the value cannot be converted, you get an error and your processing stops. For converting values, you have to pass through the table twice. Once to manually convert any known values that cannot convert into something that can or set them to NULL. Then you can run CAST or CONVERT on the values. We wanted to be able to do this in one step and this led us to .NET's TryParse() method.</p>

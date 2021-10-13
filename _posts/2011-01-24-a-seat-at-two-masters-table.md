@@ -1,33 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: A Seat at Two Masters' Table
-author:
-  display_name: lotsahelp
-  login: lotsahelp
-  email: eric@erichumphrey.com
-  url: ''
-author_login: lotsahelp
-author_email: eric@erichumphrey.com
-wordpress_id: 61
-wordpress_url: http://www.erichumphrey.com/?p=61
 date: '2011-01-24 19:33:07 -0600'
-date_gmt: '2011-01-25 01:33:07 -0600'
 categories:
 - dba
 - learning
 - sql
-tags: []
-comments:
-- id: 37
-  author: So why do you want to come to our training? And the winner is&#8230; | Paul
-    S. Randal
-  author_email: ''
-  author_url: http://www.sqlskills.com/blogs/paul/so-why-do-you-want-to-come-to-our-training-and-the-winner-is/
-  date: '2013-01-03 09:17:27 -0600'
-  date_gmt: '2013-01-03 15:17:27 -0600'
-  content: "[...] Eric Humphrey: A Seat at Two Masters&rsquo; Table [...]"
 ---
 <p>Paul Randal (<a href="http://sqlskills.com/blogs/paul/">blog</a> | <a href="http://twitter.com/PaulRandal">twitter</a>)&nbsp;<a href="http://sqlskills.com/BLOGS/PAUL/post/Master_Immersion_Event_Competition.aspx">blogged about</a> winning a free seat at a SQLskills&nbsp;<a href="http://sqlskills.com/Master1-Dallas-20110221.asp">Master Immersion Event on Internals and Performance</a> in Dallas.</p>
 <p>Since this is Paul and Kimberly judging, I'll be writing it explicitly for them as "It Depends."</p>
