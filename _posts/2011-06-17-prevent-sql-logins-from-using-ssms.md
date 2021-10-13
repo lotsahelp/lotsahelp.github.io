@@ -1,56 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Prevent SQL Logins from using SSMS ... or any other app
-author:
-  display_name: lotsahelp
-  login: lotsahelp
-  email: eric@erichumphrey.com
-  url: ''
-author_login: lotsahelp
-author_email: eric@erichumphrey.com
-wordpress_id: 222
-wordpress_url: http://www.erichumphrey.com/?p=222
 date: '2011-06-17 20:20:59 -0500'
-date_gmt: '2011-06-18 02:20:59 -0500'
 categories:
 - dba
 - sql
 - sql triggers
-tags: []
-comments:
-- id: 83
-  author: charles
-  author_email: csakari@live.com
-  author_url: http://www.schoolmaster.co.ke
-  date: '2015-01-10 08:23:21 -0600'
-  date_gmt: '2015-01-10 14:23:21 -0600'
-  content: "Dear Eric,\nI am trying to secure my sql database by preventing loggins
-    through SQL management studio and I am trying to run this script  and I am getting
-    this error message. \nkindly advise on perquisite and what I am not doing righht\n\nMsg
-    2760, Level 16, State 1, Line 2\nThe specified schema name \"SQLTrace\" either
-    does not exist or you do not have permission to use it.\nMsg 208, Level 16, State
-    1, Procedure loginDataView, Line 18\nInvalid object name 'SQLTrace.loginData'.\nMsg
-    4145, Level 15, State 1, Procedure Deny_SQLLogin_SSMS_Trigger, Line 21\nAn expression
-    of non-boolean type specified in a context where a condition is expected, near
-    ';'."
-- id: 84
-  author: Killam
-  author_email: kande.km@gmail.com
-  author_url: ''
-  date: '2015-08-17 16:57:59 -0500'
-  date_gmt: '2015-08-17 22:57:59 -0500'
-  content: nice post. I was exactly in need of this kind of implementation. I will
-    use this as a base and develop meaningful script to suit my environment
-- id: 85
-  author: lotsahelp
-  author_email: eric.humphrey@gmail.com
-  author_url: http://www.erichumphrey.com
-  date: '2015-08-18 12:10:28 -0500'
-  date_gmt: '2015-08-18 18:10:28 -0500'
-  content: Charles, you'll need to create the SQLTrace schema first. <a href="https://msdn.microsoft.com/en-us/library/ms189462.aspx"
-    rel="nofollow">CREATE SCHEMA</a> SQLTrace
 ---
 <p><em>In a continuation of my previous <a title="Have SQL Demand Application Identification" href="http://www.erichumphrey.com/2009/11/have-sql-demand-application-identification/">LOGON TRIGGER post</a>.</em></p>
 <p>A downside to SQL logins is that anyone with the username / password combination can login as that user. This prevents us from knowing who truly logged in and performed some action. It is possible to trace and log everything by IP address and correlate back to that.</p>

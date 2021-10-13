@@ -1,35 +1,13 @@
 ---
 layout: post
-status: publish
-published: true
 title: 'SQL Saturday #63 - Dallas: Wrap-up'
-author:
-  display_name: lotsahelp
-  login: lotsahelp
-  email: eric@erichumphrey.com
-  url: ''
-author_login: lotsahelp
-author_email: eric@erichumphrey.com
-wordpress_id: 184
-wordpress_url: http://www.erichumphrey.com/?p=184
 date: '2011-04-03 19:42:42 -0500'
-date_gmt: '2011-04-04 01:42:42 -0500'
 categories:
 - PASS
 - powershell
 - speaking
 - sql saturday
 - SQLServerPedia Syndication
-tags: []
-comments:
-- id: 74
-  author: Ganesh Gopalakrishnan
-  author_email: ganeshagopal@gmail.com
-  author_url: ''
-  date: '2011-04-04 22:44:09 -0500'
-  date_gmt: '2011-04-05 04:44:09 -0500'
-  content: Eric -- Point noted on Breakfast juices. Will try to get them next year
-    :)
 ---
 <p><a href="http://sqlsaturday.com/63/eventhome.aspx">SQL Saturday #63 - Dallas</a> was a great event. The <a title="Region 10" href="http://www.region10.org/">venue</a> was great, although parking was a little unclear (I had to walk all the way around the building to get in.) Breakfast was good, but I'm always disappointed when there are no breakfast juices, just coffee, cola or water.</p>
 <p>I Attended&nbsp;Rob Sullivan's (<a href="http://datachomp.com">blog</a> | <a href="http://twitter.com/#!/DataChomp">twitter</a>) session on ORMs. I always like having a different perspective of topics I talk about. He did a good job of showing what to watch out for, but not demonizing ORMs as is often done.&nbsp;David Stein's (<a href="http://www.made2mentor.com">blog</a> | <a href="http://twitter.com/#!/Made2Mentor">twitter</a>) talk on Zombie Databases was excellent. David was very entertaining to listen to. If you ever get a chance to hear him present, do so.</p>

@@ -1,51 +1,11 @@
 ---
 layout: post
-status: publish
-published: true
 title: Locking While Dropping or Altering an Index
-author:
-  display_name: lotsahelp
-  login: lotsahelp
-  email: eric@erichumphrey.com
-  url: ''
-author_login: lotsahelp
-author_email: eric@erichumphrey.com
-wordpress_id: 208
-wordpress_url: http://www.erichumphrey.com/?p=208
 date: '2011-05-11 19:19:04 -0500'
-date_gmt: '2011-05-12 01:19:04 -0500'
 categories:
 - dba
 - observation
 - sql
-tags: []
-comments:
-- id: 80
-  author: Tony Lucero
-  author_email: tony_c_lucero@yahoo.com
-  author_url: ''
-  date: '2013-01-28 12:21:11 -0600'
-  date_gmt: '2013-01-28 18:21:11 -0600'
-  content: |-
-    "hypothetical index since neither are used by active queries?"
-
-    I wouldn't be quite sure about that.  I seen hypothetical indexes referenced in execution plans.  I believe that internally the optimizer must divert back to the PK but have no evidence to backup.  However whats worse is proper stats arn't kept on the tables and furthermore the optimizer can't offer proper index choices to help you index correctly.  This is junk the last "DBA" left me from a failed index tuning job across of course all the busiest environments in my data center.  I came here in the situation your in and like you a downtime is in the near future....
-- id: 81
-  author: kb
-  author_email: bhkhx91@gmail.com
-  author_url: ''
-  date: '2014-10-20 16:05:44 -0500'
-  date_gmt: '2014-10-20 22:05:44 -0500'
-  content: If I have a script that checks through many tables and does the Reindex
-    only if the table meets certain criteria, would all the tables in that criteria
-    be locked or just the current/active table that is being be re-indexed
-- id: 82
-  author: lotsahelp
-  author_email: eric.humphrey@gmail.com
-  author_url: http://www.erichumphrey.com
-  date: '2014-10-20 16:27:41 -0500'
-  date_gmt: '2014-10-20 22:27:41 -0500'
-  content: Just the current table.
 ---
 <p>Yesterday I was trying to drop some hypothetical indexes in production against a fairly active table. I started causing blocking so I had the bright idea of disabling the indexes first, then dropping. Well, that didn't help, even when setting DEADLOCK_PRIORITY to LOW. I ended up waiting until early morning to remove those indexes to prevent from blocking other users.</p>
 <p>Finding no info on the web about the locks taken during the process of dropping or disabling an index, I set about doing this small bit of research.</p>
